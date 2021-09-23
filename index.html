@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Play!</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="fundoGame">
+        <div id="inicio">
+          <h1>Resgate</h1>
+          <p>Utilize as teclas</p>
+          <ul>
+            <li><strong>SETA PARA CIMA</strong> para movimentar para cima</li>
+            <li><strong>SETA PARA BAIXO</strong> para movimentar para baixo</li>
+            <li>
+              <strong>SETA PARA DIREITA</strong> para movimentar para frente
+            </li>
+            <li>
+              <strong>SETA PARA ESQUERDA</strong> para movimentar para trás
+            </li>
+            <li><strong>LETRA Q</strong> para atirar</li>
+          </ul>
+          <p class="start" onclick="start()">Clique aqui para iniciar.</p>
+        </div>
+      </div>
+    </div>
+
+    <audio src="./sons/som.mp3" preload="auto" id="somDisparo"></audio>
+    <audio src="./sons/explosao.mp3" preload="auto" id="somExplosao"></audio>
+    <audio src="./sons/musica_fundo.mp3" preload="auto" id="musica"></audio>
+    <audio src="./sons/gameover.mp3" preload="auto" id="somGameOver"></audio>
+    <audio src="./sons/perdido.mp3" preload="auto" id="somPerdido"></audio>
+    <audio src="./sons/resgate.mp3" preload="auto" id="somResgate"></audio>
+
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/jquery-collision.min.js"></script>
+  </body>
+</html>
