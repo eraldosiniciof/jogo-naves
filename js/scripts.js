@@ -56,7 +56,7 @@ function start() {
 
     $('#fundoGame').append('<div id="fim"></div>')
     $('#fim').html(
-      `<h1> Game Over </h1><p>Sua pontuação foi: ${pontos}</p><div id="reinicia" onClick="reiniciaJogo()"><h3>Jogar Novamente</h3></div>`
+      `<h1> Game Over </h1><div id="resumo"><p>Sua pontuação foi: ${pontos}.</p><p>Você salvou ${salvos} amigos e ${perdidos} foram perdidos.</p></div><div id="reinicia" onClick="reiniciaJogo()"><h3>Jogar Novamente</h3></div>`
     )
   }
 
@@ -195,20 +195,16 @@ function start() {
       const amigoX = parseInt($('#amigo').css('left'))
       const amigoY = parseInt($('#amigo').css('top'))
       explodeAmigo(amigoX, amigoY)
+      $('#amigo').css('left', -400)
       setTimeout(() => {
         $('#explodeAmigo').remove()
       }, 1000)
-
-      $('#amigo').css('left', -500)
     }
 
     if (colisao5) {
       somResgate.play()
       salvos++
-      setTimeout(() => {
-        $('#fundoGame').append('<div id="amigo" class="anima3"></div>')
-      }, 2000)
-      $('#amigo').remove()
+      $('#amigo').css('left', -400)
     }
 
     if (colisao4) {

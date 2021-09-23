@@ -205,9 +205,13 @@ h3:hover {
 
 #fim {
   width: 350px;
-  height: 200px;
+  height: 250px;
   background-color: white;
   margin: 100px auto;
   text-align: center;
   padding: 10px;
+}
+
+#resumo {
+  text-align: left;
 }
